@@ -1,8 +1,33 @@
 # python3
-
+import math
 
 def build_heap(data):
     swaps = []
+    n = len(data)
+
+    while n != 0:
+        (data[int(math.floor((n-1)/2))], data[n-1]) = (data[n-1], data[int(math.floor((n-1)/2))])
+
+        swaps.append((int(math.floor((n-1)/2)), n))
+
+        n1 = n
+
+        while 2*n1 + 1 < len(data): #WHICH N1 SHOULD BE???????
+            if data[n1] > data[2*n1]:
+                (data[2*n1], data[n1]) = (data[n1], data[2*n1]) 
+                
+
+
+                
+                swaps.append((n1, 2*n1))
+                
+                n1 = 2*n1
+        
+        n = int(math.floor((n-1)/2)) 
+ 
+
+
+
     # TODO: Creat heap and heap sort
     # try to achieve  O(n) and not O(n2)
 
@@ -11,15 +36,17 @@ def build_heap(data):
 
 
 def main():
-    
-    # TODO : add input and corresponding checks
-    # add another input for I or F 
-    # first two tests are from keyboard, third test is from a file
+    text = input()
+    if 'F' in text in text:
+        file_name = input()
+        file = "./test/" + file_name
+        with open(file) as f:
+            т = int(f.readline())
+            data = list(map(int, f.readline().split()))
+    if 'I' in text:
+        n = int(input())
+        data = list(map(int, input().split()))
 
-
-    # input from keyboard
-    n = int(input())
-    data = list(map(int, input().split()))
 
     # checks if lenght of data is the same as the said lenght
     assert len(data) == n
