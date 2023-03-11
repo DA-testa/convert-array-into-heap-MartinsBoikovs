@@ -16,7 +16,6 @@ def build_heap(data):
 
     return swaps
 
-
 def main():
     text = input()
     if 'F' in text in text:
