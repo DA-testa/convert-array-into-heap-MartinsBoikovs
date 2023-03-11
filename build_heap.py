@@ -18,7 +18,7 @@ def build_heap(data):
 
 def main():
     text = input()
-    if 'F' in text in text:
+    if 'F' in text:
         file_name = input()
         file = "./test/" + file_name
         with open(file) as f:
