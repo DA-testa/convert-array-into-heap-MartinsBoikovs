@@ -1,4 +1,6 @@
 # python3
+#Darīju to codespace un poga "Fiksācija bezgalīgi lādējās, tāpēc kodu kopēju šajā failā
+
 import math
 
 def build_heap(data):
