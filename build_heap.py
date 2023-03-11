@@ -20,7 +20,7 @@ def main():
     text = input()
     if 'F' in text:
         file_name = input()
-        file = "./test/" + file_name
+        file = "./tests/" + file_name
         with open(file) as f:
             n = int(f.readline())
             data = list(map(int, f.readline().split()))
