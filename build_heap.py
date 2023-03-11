@@ -6,7 +6,7 @@ def build_heap(data):
 
     for i in reversed(data):
         n = data.index(i)
-
+        
         while n != 0:
             if data[n] < data[int(math.floor((n-1)/2))]:
                 data[n],data[int(math.floor((n-1)/2))]=data[int(math.floor((n-1)/2))],data[n]
